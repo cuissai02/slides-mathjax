@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MathJax</title>
+		<meta name="description" content="Beautiful mathematics on the web">
+		<meta name="author" content="Peter Krautzberger">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                # MathJax
+                                                ### beautiful mathematics on the web
+                                                                                                
+                                                Peter Krautzberger (*MathJax*)
+                                                
+                                                [pkra.github.io/slides-mathjax](http://pkra.github.io/slides-mathjax)
+                                        </script>
+                                </section>
+
+
+
+
+                                <section>
+                                      <section data-markdown>
+                                        <script type="text/template">
+                                                ## What is MathJax for?
+                                                
+                                                $$\frac{1}{2 \pi} \int\_{-\pi}^\pi e^{i(n \tau - x \sin(\tau))} \,d\tau = \sum\limits\_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m + n + 1)}{\left({\frac{x}{2}}\right)}^{2 m + n}$$ <!-- .element: class="fragment" -->
+                                                
+                                                <blockquote class="fragment">Not that spectacular, right?</blockquote>
+                                </script>
+                                </section>
+
+
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## But it is!
+                                                
+                                                * high-quality typography <!-- .element: class="fragment" -->
+                                                * using web standards <!-- .element: class="fragment" -->
+                                                * <!-- .element: class="fragment" --> on *all* browsers & platforms 
+                                                * <!-- .element: class="fragment" --> open source (Apache)
+                                </script>
+                                </section>
+                            
+                            </section>
+
+                                <section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## Why MathJax?
+                                                
+                                                Enabling mathematics natively on the web <!-- .element: class="fragment" --> 
+                                        </script>
+                                </section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## very short history of math on the web
+                                                * <!-- .element: class="fragment" --> 1995: HTML 3 proposes `<math`> tag
+                                                * <!-- .element: class="fragment" --> 1997: rejected with HTML 3.2 
+                                                  * <!-- .element: class="fragment" --> XML/modularization 
+                                                * <!-- .element: class="fragment" --> 1998: MathML
+                                                * <!-- .element: class="fragment" --> Early 2000s: 
+                                                  * MathPlayer for IE
+                                                  * Mozilla/Firefox with (some) MathML support
+                                         </script>
+                                </section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## The other side
+                                                * <!-- .element: class="fragment" --> Images
+                                                * <!-- .element: class="fragment" --> Images
+                                                * <!-- .element: class="fragment" --> Images
+                                                * <!-- .element: class="fragment" --> 2004: jsmath
+                                        </script>
+                                </section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## Native mathematical rendering means...
+                                                * <!-- .element: class="fragment" --> Actual (text) layout
+                                                * <!-- .element: class="fragment" --> Reflow (<a href="http://cdpn.io/dCgzi">example</a>)
+                                                * <!-- .element: class="fragment" --> Interactivity 
+                                                  * $\require{action} \toggle{\frac{1}{2}+\frac{1}{3}}{\frac{1\cdot 3}{2\cdot 3}+\frac{1\cdot 2}{3 \cdot 2}}{\frac{3+2}{6}}\endtoggle$
+                                                * <!-- .element: class="fragment" --> Accessibility
+                                        </script>
+                                </section>
+                                </section>
+                               
+                                <section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## How does MathJax work?
+                                                * <!-- .element: class="fragment" -->  JavaScript                                                 
+                                                * <!-- .element: class="fragment" -->  client-side
+                                                * <!-- .element: class="fragment" -->  asynchronous
+                                                * <!-- .element: class="fragment" -->  modular
+                                        </script>
+                                </section>
+                                
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## Format agnostic
+                                                * <!-- .element: class="fragment" -->  Input: TeX, MathML, Asciimath
+                                                * <!-- .element: class="fragment" -->  Ouput: HTML-CSS, SVG, MathML
+                                                * <!-- .element: class="fragment" -->  internally: XML/MathML
+                                        </script>
+                                        
+                                </section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## High quality layout
+                                                * <!-- .element: class="fragment" -->  TeX layout algorithm, 
+                                                * <!-- .element: class="fragment" -->  Some examples:
+                                                  * [Springer Open](http://www.advancesindifferenceequations.com/content/2014/1/149?fmt_math=yes&fmt_math_check=on#sec4)
+                                                  * [MathOverflow](http://www.mathjax.org/community/mathjax-in-use/)
+
+                                        </script>
+				  </section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ## Rich APIs
+                                                More examples: <!-- .element: class="fragment" -->  
+
+                                                * <!-- .element: class="fragment" -->  live (math) editing: [OERpub editor](http://oerpub.github.io/Aloha-Editor/oerpub/index.html)
+                                                * <!-- .element: class="fragment" -->  interactive learning: [Numbas](http://numbas.mathcentre.ac.uk/test-yourself/complex-roots-of-real-polynomials/)
+                                                * <!-- .element: class="fragment" -->  web and mobile apps: [xcas](https://github.com/xcaspad)
+                                                * <!-- .element: class="fragment" -->  more at [mathjax.org](http://www.mathjax.org)
+
+                                        </script>
+				  </section>
+
+                                </section>
+
+                                <section>
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ### More links
+                                                * [MathJax.org](http://www.mathjax.org)
+                                                * [MathML forges on](http://programming.oreilly.com/2013/11/mathml-forges-on.html)
+                                                * [MathML specification](http://www.w3.org/TR/MathML3/)
+                                        </script>
+                                </section>
+
+                                <section data-markdown>
+                                        <script type="text/template">
+                                                ### Contact                                                 
+                                                <peter.krautzberger@mathjax.org>
+                                                
+                                                [@pkrautz](http://twitter.com/pkrautz) 
+                                                [+peter.krautzberger](https://plus.google.com/+PeterKrautzberger/auto)
+                                        </script>
+                                </section>
+                                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+    math: {
+        mathjax: 'http://beta.mathjax.org/mathjax/latest/MathJax.js',
+        config: 'TeX-AMS-MML_HTMLorMML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
